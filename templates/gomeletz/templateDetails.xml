@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 3/0//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/3.0/template-install.dtd">
+<extension version="3.0"
+type="template"
+client="site">
+
+	<name>gomeletz</name>
+	<version>1.0</version>
+	<creationDate>08/2016</creationDate>
+	<author>Bolonikov Sergei</author>
+	<authorEmail>sergeibolonikov@gmail.com</authorEmail>
+	<authorUrl></authorUrl>
+	<copyright>GNU/GPL</copyright>
+	<description>gomeletz</description>
+	
+	<files>
+		<folder>css</folder>
+		<filename>index.php</filename>
+	</files>
+	
+	<positions>
+		<position>header-left</position>
+		<position>header-center</position>
+		<position>header-right</position>
+		<position>top-menu</position>
+		<position>before-content-without-container</position>
+		<position>before-content</position>
+		<position>content</position>
+		<position>after-content</position>
+		<position>after-content-without-container</position>
+
+	</positions>
+	
+</extension>
