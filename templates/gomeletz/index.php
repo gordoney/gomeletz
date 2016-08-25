@@ -70,7 +70,7 @@ $pageClass = $activeMenu->params['pageclass_sfx']; ?>
 	<div class="content-wrapper">
 		<?php if ($this->countModules('before-content')) { ?>
 			<div id="before-content">
-				<div class="container-fluid">
+				<div class="container">
 					<jdoc:include type="modules" name="before-content" style="xhtml" />
 				</div>
 			</div>
@@ -78,22 +78,27 @@ $pageClass = $activeMenu->params['pageclass_sfx']; ?>
 
 		<?php if ($this->countModules('content')) { ?>
 			<div id="content">
-				<div class="container-fluid">
+				<div class="container">
 					<jdoc:include type="modules" name="content" style="xhtml" />
 				</div>
 			</div>
 		<?php } else { ?>
 			<div id="content">
-				<div class="container-fluid">
-					<jdoc:include type="message" />
-					<jdoc:include type="component" />
+				<div class="container clearfix">
+					<div class="left-block-content">
+						<jdoc:include type="modules" name="left-block-content" style="xhtml" />
+					</div>
+					<div class="right-block-content">
+						<jdoc:include type="message" />
+						<jdoc:include type="component" />
+					</div>
 				</div>
 			</div>
 		<?php } ?>
 
 		<?php if ($this->countModules('after-content')) { ?>
 			<div id="after-content">
-				<div class="container-fluid">
+				<div class="container">
 					<jdoc:include type="modules" name="after-content" style="xhtml" />
 				</div>
 			</div>
@@ -107,7 +112,7 @@ $pageClass = $activeMenu->params['pageclass_sfx']; ?>
 	<?php } ?>
 
     <div id="footer">
-        <div class="container-fluid">
+        <div class="container">
 			<div class="row">
 				<div class="footer footer_top">
 					<jdoc:include type="modules" name="footer_top" style="none" />

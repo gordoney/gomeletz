@@ -181,6 +181,11 @@ a, a:hover, a:focus {
     text-shadow: none;
 }
 
+h1 {
+    font-size: 1em;
+    margin: 0;
+}
+
 
 
 
@@ -269,6 +274,7 @@ a, a:hover, a:focus {
 
     a:hover {
         border-bottom: 1px solid transparent;
+        color: @font-color5;
     }
 }
 
@@ -475,5 +481,161 @@ a, a:hover, a:focus {
             background-color: @color1;
             padding: 8px 0;
         }
+    }
+}
+
+
+
+
+
+
+/*------------------------------------*\
+    #CONTENT (контентная часть)
+\*------------------------------------*/
+.left-block-content {
+    width: 25%;
+    float: left;
+}
+
+.right-block-content {
+    width: 75%;
+    float: left;
+    padding-left: 4%;
+}
+
+.content-wrapper {
+    padding: 50px 0;
+    position: relative;
+
+    p {
+        font-size: 14px;
+        font-weight: 300;
+        padding-bottom: 20px;
+        line-height: 1.6;
+    }
+
+    p.bold {
+        font-family: @font1-bold;
+        font-size: 24px;
+    }
+}
+
+.content-wrapper:before {
+    content: "";
+    .gradient(lighten(@color1, 50%), @color4, @color4, top);
+    height: 150px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.content-wrapper:after {
+    content: "";
+    .gradient(lighten(@color1, 50%), @color4, @color4, bottom);
+    height: 150px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.page-header {
+    font-size: 30px;
+    font-family: @font1-bold;
+    text-transform: uppercase;
+    padding-bottom: 50px;
+}
+
+
+
+
+
+/*------------------------------------*\
+    #LEFT_MENU (левое меню)
+\*------------------------------------*/
+.mod_jshoppoing_categories {
+    border-right: 1px solid lighten(@color3, 88%);
+
+    a {
+        display: block;
+    }
+
+    .img {
+        display: inline-block;
+        width: 20%;
+        height: 65px;
+        vertical-align: middle;
+        border-radius: 100%;
+        border: 2px solid lighten(@color3, 88%);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 63%;
+        .transition(0.2s);
+    }
+
+    .name {
+        display: inline-block;
+        width: 67%;
+        margin: 0 5%;
+        vertical-align: middle;
+        font-size: 14px;
+        font-family: @font1;
+        color: black;
+        .transition(0.2s);
+    }
+
+    a:hover .name {
+        color: @font-color5;
+    }
+
+    a:hover .img {
+        border: 2px solid @color5;
+    }
+
+    .category + .category {
+        padding-top: 5px;
+    }
+}
+
+
+
+
+
+/*------------------------------------*\
+    #MOD_FEATURES (модуль особенностей)
+\*------------------------------------*/
+.mod_features_gr {
+    .feature {
+        float: left;
+        width: 33.3%;
+    }
+
+    .img {
+        width: 35%;
+        height: 70px;
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-size: contain;
+        float: left;
+    }
+
+    .text {
+        width: 65%
+        float: left;
+        padding-top: 5px;
+        line-height: 1.2;
+        padding-right: 3%;
+    }
+
+    .bold {
+        font-size: 24px;
+        font-family: @font1-bold;
+        padding-bottom: 5px;
+    }
+
+    .normal {
+        font-size: 14px;
+        font-weight: 300;
     }
 }

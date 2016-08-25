@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.0"
+	client="site"
+	method="upgrade">
+	<name>Особенности организации</name>
+	<author>Sergei Bolonikov</author>
+	<creationDate>2016</creationDate>
+	<copyright></copyright>
+	<license></license>
+	<authorEmail>sergeibolonikov@gmail.com</authorEmail>
+	<authorUrl></authorUrl>
+	<version>1.0</version>
+	<description>Особенности организации</description>
+	<files>
+		<filename module="mod_features_gr">mod_features_gr.php</filename>
+		<filename>index.html</filename>		
+		<filename>mod_features_gr.xml</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="features"
+					type="Repeatable"
+					description="Контент"
+					label="Контент">
+					<fieldset name="features-block" repeat="true">		
+                        <field name="img" type="media"
+                            label="Изображение" />                     
+                        <field name="bold-text" type="text"
+                            label="Выделенный текст" />     
+                        <field name="normal-text" type="text"
+                            label="Текст" />                             
+					</fieldset>
+				</field>                  
+			</fieldset>
+		</fields>
+	</config>
+</extension>

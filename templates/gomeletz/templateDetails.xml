@@ -28,7 +28,8 @@ client="site">
 		<position>content</position>
 		<position>after-content</position>
 		<position>after-content-without-container</position>
-
+		<position>left-block-content</position>
+		<position>material</position>
 	</positions>
 	
 </extension>
