@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.0"
+	client="site"
+	method="upgrade">
+	<name>Модуль социальных кнопок</name>
+	<author>Sergei Bolonikov</author>
+	<creationDate>2016</creationDate>
+	<copyright></copyright>
+	<license></license>
+	<authorEmail>sergeibolonikov@gmail.com</authorEmail>
+	<authorUrl></authorUrl>
+	<version>1.0</version>
+	<description>Модуль социальных кнопок</description>
+	<files>
+		<folder>tmpl</folder>
+        <folder>fonts</folder>
+        <folder>css</folder>
+		<filename module="mod_social_gr">mod_social_gr.php</filename>
+		<filename>index.html</filename>		
+		<filename>mod_social_gr.xml</filename>
+		<filename>helper.php</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="social"
+					type="Repeatable"
+					description="Контент"
+					label="Контент">
+					<fieldset name="social_block" repeat="true">			
+						<field name="color" type="text"
+							label="Цвет бекграунда"
+							description="Указывать в hex (без #)" />	
+						<field name="social_type" type="list" default="" label="Выберите соц. сеть" description="">
+							<option value="google-plus">Google+</option>
+							<option value="youtube">Youtube</option>
+							<option value="instagram">Instagram</option>
+							<option value="vk">VK</option>
+							<option value="odnoklassniki">Одноклассники</option>
+							<option value="facebook">Facebook</option>
+							<option value="twitter">Twitter</option>
+                            <option value="linkedin">LinkedIn</option>
+						</field>
+						<field name="url" type="text"
+							label="Ссылка" />							
+					</fieldset>
+				</field>				
+			</fieldset>
+		</fields>
+	</config>
+</extension>

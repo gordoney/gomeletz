@@ -9,7 +9,7 @@
 // no direct access
 defined('_JEXEC') or die;
 ?>
-<div class="mod_features_gr">
+<div class="mod-features-gr">
     <div class="features clearfix">
 	<?php foreach ($features as $feature) { ?>
         <div class="feature clearfix">

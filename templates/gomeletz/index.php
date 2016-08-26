@@ -77,13 +77,13 @@ $pageClass = $activeMenu->params['pageclass_sfx']; ?>
 		<?php } ?>
 
 		<?php if ($this->countModules('content')) { ?>
-			<div id="content">
+			<div id="main-content" class="main-content">
 				<div class="container">
 					<jdoc:include type="modules" name="content" style="xhtml" />
 				</div>
 			</div>
 		<?php } else { ?>
-			<div id="content">
+			<div id="main-content" class="main-content">
 				<div class="container clearfix">
 					<div class="left-block-content">
 						<jdoc:include type="modules" name="left-block-content" style="xhtml" />
@@ -111,22 +111,20 @@ $pageClass = $activeMenu->params['pageclass_sfx']; ?>
 		</div>		
 	<?php } ?>
 
-    <div id="footer">
+    <div id="footer" class="footer">
         <div class="container">
-			<div class="row">
-				<div class="footer footer_top">
-					<jdoc:include type="modules" name="footer_top" style="none" />
-				</div>				
-			</div>
-			<div class="row">
-				<div class="footer footer_left">
-					<jdoc:include type="modules" name="footer_left" style="none" />
+			<div class="row clearfix">
+				<div class="footer-left">
+					<jdoc:include type="modules" name="footer-left" style="none" />
 				</div>		
-				<div class="footer footer_center">
-					<jdoc:include type="modules" name="footer_center" style="none" />
-				</div>	
-				<div class="footer footer_right">
-					<jdoc:include type="modules" name="footer_right" style="none" />
+				<div class="footer-center-left">
+					<jdoc:include type="modules" name="footer-center-left" style="none" />
+				</div>
+				<div class="footer-center-right">
+					<jdoc:include type="modules" name="footer-center-right" style="none" />
+				</div>
+				<div class="footer-right">
+					<jdoc:include type="modules" name="footer-right" style="none" />
 					<div class="medialine">
 						<?php if(JURI::current() !== JURI::base()){?>
 							<span>Разработка сайта - </span><a target="_blank" rel="nofollow" href="http://www.medialine.by/">Media Line</a>
