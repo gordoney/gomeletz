@@ -79,10 +79,8 @@ defined('_JEXEC') or die;
 	<div class="modal fade answer" id="answer<?php echo $module->id; ?>" tabindex="-1" role="dialog">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
-				<div class="modal-body">
-					<div type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</div>
-					<div><?php echo $params->get('thanks'); ?></div>
-				</div>
+                <div type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</div>
+                <div><?php echo $params->get('thanks'); ?></div>
 			</div>
 		</div>
 	</div>

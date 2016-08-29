@@ -89,7 +89,7 @@ $pageClass = $activeMenu->params['pageclass_sfx']; ?>
 						<jdoc:include type="modules" name="left-block-content" style="xhtml" />
 					</div>
 					<div class="right-block-content">
-						<jdoc:include type="message" />
+						<!--<jdoc:include type="message" />-->
 						<jdoc:include type="component" />
 					</div>
 				</div>
