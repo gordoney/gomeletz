@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="a4de08a2-a9ae-420e-a47a-c7d6363676e5" name="gomeletz" url="http://ftp.gomeletz.com.medialine.by">
+        <fileTransfer host="ftp.gomeletz.com.medialine.by" port="21" rootFolder="/domains/gomeletz.com.medialine.by/public_html" password="dfcedfe6dfebdf92df9fdf84dfc1df92" username="gomeletz">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

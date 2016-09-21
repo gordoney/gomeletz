@@ -90,6 +90,7 @@ $pageClass = $activeMenu->params['pageclass_sfx']; ?>
 					</div>
 					<div class="right-block-content">
 						<!--<jdoc:include type="message" />-->
+						<jdoc:include type="modules" name="before-component" style="none" />
 						<jdoc:include type="component" />
 					</div>
 				</div>

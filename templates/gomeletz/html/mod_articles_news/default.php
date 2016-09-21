@@ -23,7 +23,7 @@ defined('_JEXEC') or die;
 	</div>
 
 	<div class="all">
-		<a href="<?php echo JRoute::_('index.php?option=com_content&view=category&layout=blog&id='.json_decode($module->params)->catid[0]); ?>">
+		<a href="/novosti">
 			<span><?php echo JText :: _('MOD_ARTICLE_NEWS_ALL'); ?></span>
 		</a>
 	</div>
