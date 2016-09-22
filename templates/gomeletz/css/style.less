@@ -48,17 +48,20 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-right-arrow:before {
-    content: "\e900";
-}
-.icon-phone-call2:before {
-    content: "\e901";
+.icon-phone-call:before {
+    content: "\e903";
 }
 .icon-mail:before {
     content: "\e902";
 }
-.icon-phone-call:before {
-    content: "\e903";
+.icon-phone-call2:before {
+    content: "\e901";
+}
+.icon-map-marker:before {
+    content: "\e904";
+}
+.icon-right-arrow:before {
+    content: "\e900";
 }
 
 
@@ -78,6 +81,8 @@
 @color4: #ffffff;
 @color5: #f60c22;
 @color6: #87d541;
+@color7: #bac4d8;
+
 
 @font-color1: #006dca;
 @font-color2: #212e44;
@@ -85,6 +90,8 @@
 @font-color4: #ffffff;
 @font-color5: #f60c22;
 @font-color6: #87d541;
+@font-color7: #bac4d8;
+
 
 @font1: 'Lato';
 @font1-bold: 'Lato Bold';
@@ -555,7 +562,7 @@ h1 {
     font-size: 30px;
     font-family: @font1-bold;
     text-transform: uppercase;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
 }
 
 .page-header-inner {
@@ -709,7 +716,7 @@ h1 {
     .date {
         width: 45px;
         height: 45px;
-        background-color: darken(@color4, 20%);
+        background-color: @color7;
         color: @font-color4;
         display: inline-block;
         vertical-align: top;
@@ -1182,7 +1189,7 @@ table.acymailing_form {
     .date {
         width: 45px;
         height: 45px;
-        background-color: darken(@color4, 20%);
+        background-color: @color7;
         color: @font-color4;
         display: inline-block;
         vertical-align: top;
@@ -1220,7 +1227,7 @@ table.acymailing_form {
     a.item {
         display: block;
         padding-bottom: 20px;
-        border-bottom: 1px solid darken(@color4, 20%);
+        border-bottom: 1px solid @color7;
 
         &:hover {
             .name {
@@ -1235,6 +1242,34 @@ table.acymailing_form {
 
     a.item + a.item {
         padding-top: 40px;
+    }
+}
+
+
+
+
+
+
+/*------------------------------------*\
+    #SINGLE_PAGE (страница)
+\*------------------------------------*/
+.item-page {
+    font-weight: 300;
+    line-height: 1.5;
+
+    .page-header {
+        text-transform: none;
+        padding-bottom: 20px;
+        line-height: 1.2;
+    }
+
+    .publish-date {
+        padding: 6px 7px 3px 7px;
+        background-color: @color7;
+        color: @font-color4;
+        display: inline-block;
+        font-family: @font1-bold;
+        margin-bottom: 20px;
     }
 }
 
@@ -1271,7 +1306,7 @@ table.acymailing_form {
     }
 
     a {
-        background-color: darken(@color4, 20%);
+        background-color: @color7;
 
         &:hover {
             background-color: @color5;
@@ -1285,4 +1320,287 @@ table.acymailing_form {
 
 .items-more {
     display: none;
+}
+
+
+
+
+
+
+/*------------------------------------*\
+    #PRODUCTS (товары)
+\*------------------------------------*/
+.jshop_products {
+    .page-header {
+        font-size: 30px !important;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .row-fluid {
+        margin-left: -20px;
+    }
+
+    .sblock4 {
+        padding-left: 20px !important;
+    }
+
+    .image_block {
+        height: 200px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: auto 80%;
+        border: 1px solid darken(@color4, 6%);
+        display: block;
+        margin-bottom: 25px;
+        position: relative;
+        .transition(0.2s);
+
+        &:after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            content: '';
+            background-color: @color3;
+            opacity: 0;
+            .transition(0.2s);
+        }
+    }
+
+    .name {
+        padding-bottom: 15px;
+
+        span {
+            .transition(0.2s);
+            color: @font-color1;
+            font-weight: 300;
+            font-size: 14px !important;
+            border-bottom: 1px solid lighten(@font-color1, 50%);
+        }
+    }
+
+    a:hover {
+        .image_block {
+            background-size: auto 100%;
+
+            &:after {
+                opacity: 0.1;
+            }
+        }
+
+        .name {
+            span {
+                color: @font-color5;
+                border-bottom: 1px solid lighten(@font-color5, 50%);
+            }
+        }
+    }
+
+    .pagination {
+        a, span {
+            font-family: @font1;
+            border-radius: 4px;
+        }
+
+        a {
+            background-color: transparent;
+            color: @font-color3;
+
+            &:hover {
+                color: @font-color5;
+            }
+        }
+
+        span {
+            .gradient(lighten(@color1, 50%), @color1, lighten(@color1, 35%), top);
+        }
+    }
+}
+
+#mxcpr {
+    display: none;
+}
+
+
+
+
+
+
+/*------------------------------------*\
+    #PRODUCT (товар)
+\*------------------------------------*/
+.productfull {
+    .page-header {
+        font-size: 30px !important;
+
+        span {
+            font-size: 20px;
+            text-transform: none;
+            font-family: @font2;
+        }
+    }
+
+    div.jshop_prod_description {
+        padding-top: 0;
+    }
+
+    p {
+        font-weight: 400;
+    }
+
+    table, table.type2 {
+        width: 100%;
+
+        thead {
+            background-color: #3e96df;
+            color: @font-color4;
+            font-size: 14px;
+
+            td {
+                text-align: center;
+                padding: 10px 0;
+                border: 1px solid lighten(@color1, 50%);
+            }
+        }
+
+        tbody {
+            td {
+                border: 1px solid darken(@color4, 20%);
+                padding: 10px;
+                vertical-align: middle;
+                font-weight: 400;
+            }
+        }
+    }
+
+    table.type1 {
+        width: 100%;
+        border-bottom: 2px solid lighten(@color1, 55%);
+
+        thead {
+            background-color: transparent;
+            color: @font-color3;
+
+            td {
+                padding: 10px 0;
+                font-weight: 700;
+                border: none;
+                text-align: left;
+            }
+        }
+
+        tbody {
+            td {
+                padding: 10px 25px;
+                border: none;
+            }
+
+            tr:nth-child(odd) {
+                background-color: lighten(@color1, 55%);
+            }
+        }
+    }
+}
+
+
+
+
+
+/*------------------------------------*\
+    #MOD_CONTACTS (страница контактов)
+\*------------------------------------*/
+.mod_page_contacts_gr {
+    font-weight: 300;
+
+    .organization {
+        font-size: 18px;
+        font-weight: 700;
+        color: darken(@font-color7, 40%);
+        line-height: 1.3;
+        padding-bottom: 20px;
+    }
+
+    .left {
+        float: left;
+        width: 60%;
+    }
+
+    .right {
+        float: left;
+        width: 40%;
+    }
+
+    .address {
+        padding-left: 30px;
+        position: relative;
+        padding-bottom: 15px;
+
+        &:before {
+            position: absolute;
+            content: "\e904";
+            font-family: 'icomoon';
+            color: @color5;
+            left: 0;
+            font-size: 22px;
+            top: -4px;
+        }
+
+        &>div {
+            padding-bottom: 15px;
+        }
+    }
+
+    .emails {
+        padding-left: 35px;
+        position: relative;
+        padding-bottom: 15px;
+
+        &:before {
+            position: absolute;
+            content: "\e902";
+            font-family: 'icomoon';
+            color: @color5;
+            left: 0;
+            font-size: 23px;
+            top: -4px;
+        }
+
+        &>div {
+            padding-bottom: 15px;
+        }
+
+        a {
+            color: @font-color1;
+            border-bottom: 1px solid lighten(@font-color1, 15%);
+
+            &:hover {
+                border-bottom: 1px solid transparent;
+                color: @font-color5;
+            }
+        }
+    }
+
+    .phones {
+        padding-left: 30px;
+        position: relative;
+        padding-bottom: 15px;
+
+        &:before {
+            position: absolute;
+            content: "\e903";
+            font-family: 'icomoon';
+            color: @color5;
+            left: 0;
+            font-size: 20px;
+            top: -4px;
+        }
+
+        &>div {
+            padding-bottom: 15px;
+        }
+    }
 }

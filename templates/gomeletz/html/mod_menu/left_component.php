@@ -30,7 +30,7 @@ $linktype = $item->title;
 
 if ($item->menu_image)
 {
-	$linktype = '<div class="img" style="background-image:url('.$item->menu_image.');"></div>';
+	$linktype = '<div class="img" style="background-image:url(/'.$item->menu_image.');"></div>';
 
 	if ($item->params->get('menu_text', 1))
 	{

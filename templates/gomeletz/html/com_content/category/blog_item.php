@@ -19,8 +19,8 @@ $info    = $params->get('info_block_position', 0);
 <a class="item clearfix" href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid, $this->item->language)); ?>">
 	<div class="date-block">
 		<div class="date">
-			<div class="date-dm"><?php echo JHtml::_('date', $displayData['item']->created, JText::_('DATE_FORMAT_NEWS1')); ?></div>
-			<div class="date-y"><?php echo JHtml::_('date', $displayData['item']->created, JText::_('DATE_FORMAT_NEWS2')); ?></div>
+			<div class="date-dm"><?php echo JHtml::_('date', $displayData['item']->publish_up, JText::_('DATE_FORMAT_NEWS1')); ?></div>
+			<div class="date-y"><?php echo JHtml::_('date', $displayData['item']->publish_up, JText::_('DATE_FORMAT_NEWS2')); ?></div>
 		</div>
 	</div>
 

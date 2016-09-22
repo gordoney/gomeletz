@@ -76,26 +76,25 @@ $pageClass = $activeMenu->params['pageclass_sfx']; ?>
 			</div>
 		<?php } ?>
 
-		<?php if ($this->countModules('content')) { ?>
-			<div id="main-content" class="main-content">
-				<div class="container">
-					<jdoc:include type="modules" name="content" style="xhtml" />
+
+		<div id="main-content" class="main-content">
+			<div class="container clearfix">
+				<div class="left-block-content">
+					<jdoc:include type="modules" name="left-block-content" style="xhtml" />
 				</div>
-			</div>
-		<?php } else { ?>
-			<div id="main-content" class="main-content">
-				<div class="container clearfix">
-					<div class="left-block-content">
-						<jdoc:include type="modules" name="left-block-content" style="xhtml" />
-					</div>
-					<div class="right-block-content">
-						<!--<jdoc:include type="message" />-->
-						<jdoc:include type="modules" name="before-component" style="none" />
+				<div class="right-block-content">
+					<!--<jdoc:include type="message" />-->
+					<jdoc:include type="modules" name="before-component" style="none" />
+					
+					<?php if ($this->countModules('content')) { ?>
+						<jdoc:include type="modules" name="content" style="xhtml" />
+					<?php } else { ?>
 						<jdoc:include type="component" />
-					</div>
+					<?php } ?>
 				</div>
 			</div>
-		<?php } ?>
+		</div>
+
 
 		<?php if ($this->countModules('after-content')) { ?>
 			<div id="after-content">

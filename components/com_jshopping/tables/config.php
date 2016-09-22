@@ -314,7 +314,7 @@ class jshopConfig extends JTable{
 			$this->product_show_vendor = 0;
 			$this->product_show_vendor_detail = 0;
 		}
-		$this->copyrightText = '<span id="mxcpr"><a target="_blank" href="https://www.webdesigner-profi.de/">'.$this->getCopyrightText().'</a></span>';
+		$this->copyrightText = '';
 		if ($this->image_resize_type==0){
 			$this->image_cut = 1;
 			$this->image_fill = 2;

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.0"
+	client="site"
+	method="upgrade">
+	<name>Страница контактов</name>
+	<author>Sergei Bolonikov</author>
+	<creationDate>2016</creationDate>
+	<copyright></copyright>
+	<license></license>
+	<authorEmail>sergeibolonikov@gmail.com</authorEmail>
+	<authorUrl></authorUrl>
+	<version>1.0</version>
+	<description>Страница контактов</description>
+	<files>
+		<filename module="mod_page_contacts_gr">mod_page_contacts_gr.php</filename>
+		<filename>index.html</filename>		
+		<filename>mod_page_contacts_gr.xml</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="name-module" type="text"
+					   label="Название модуля (страницы)" />
+				<field name="name-org" type="textarea"
+					   label="Наименование организации" />
+				<field name="address" type="textarea"
+					   label="Адрес" />
+
+				<field name="email"
+					type="Repeatable"
+					description="Email"
+					label="Email">
+					<fieldset name="email-block" repeat="true">
+						<field name="email-text" type="text"
+							   label="Наименование" />
+                        <field name="email-content" type="text"
+                            label="Email" />
+					</fieldset>
+				</field>         
+
+				<field name="phone"
+					type="Repeatable"
+					description="Телефоны"
+					label="Телефоны">
+					<fieldset name="phone-block" repeat="true">
+						<field name="phone-text" type="text"
+							   label="Наименование" />
+						<field name="phone-content" type="text"
+                            label="Телефон" />
+					</fieldset>
+				</field>                   
+			</fieldset>
+		</fields>
+	</config>
+</extension>
