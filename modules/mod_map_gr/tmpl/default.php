@@ -24,7 +24,7 @@ defined('_JEXEC') or die;
     <?php } ?>
     
                 <div class="map"> 
-                    <div id="page_map_gr<?php echo $module->id; ?>" style="height: 400px;" class="map_window"></div>				
+                    <div id="page_map_gr<?php echo $module->id; ?>" style="height: 300px;" class="map_window"></div>
                 </div>	
                 
     <?php if ($params->get('modal-on')) { ?>                

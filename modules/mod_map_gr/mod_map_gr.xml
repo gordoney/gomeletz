@@ -41,7 +41,9 @@
 						<field name="markerx" type="text"
 							label="Координаты x" />		
 						<field name="markery" type="text"
-							label="Координаты y" />		                     
+							label="Координаты y" />
+						<field name="balloon" type="text"
+							   label="Открывающееся окошко" />
 					</fieldset>
 				</field>				
 			</fieldset>

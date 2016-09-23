@@ -15,7 +15,9 @@ jQuery(document).ready(function() {
                 }); 	
                 
                 json.markers.forEach(function(marker, i) {
-                    var mapPlacemark = new ymaps.Placemark([marker.markerx,marker.markery], {}, {
+                    var mapPlacemark = new ymaps.Placemark([marker.markerx,marker.markery], {
+                        balloonContent: marker.balloon,
+                    }, {
                         iconLayout: 'default#image',
                         /*iconImageHref: 'images/marker.png',
                         iconImageSize: [64, 64],

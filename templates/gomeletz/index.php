@@ -28,6 +28,7 @@ $document->addStyleSheet($this->baseurl.'/templates/'.$this->template.'/css/styl
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.6.1/less.min.js"></script>
 
 	<link rel="icon" type="image/vnd.microsoft.icon" href="/templates/<?php echo $this->template; ?>/favicon.ico">
+	<link rel="shortcut icon" href="/templates/<?php echo $this->template; ?>/favicon.ico" type="image/x-icon">
 	<meta name="viewport" content="width=1280px">
 </head>
 <?php /* Получаем класс страницы */
